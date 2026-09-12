@@ -1,16 +1,23 @@
-# React + Vite
+# Applicazione Dashboard Meteo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Obiettivo
 
-Currently, two official plugins are available:
+> L’obiettivo di questo progetto è creare un’applicazione **Weather Dashboard** interattiva e responsive lato front-end.
+> L’applicazione dovrà fornire agli utenti una previsione meteo completa per Lodi, Italia. 
+> È possibile utilizzare qualsiasi tecnologia preferita.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Requisiti
 
-## React Compiler
+> La Weather Dashboard deve avere due pagine: dashboard e impostazioni. Gli utenti devono poter
+> navigare tra le due pagine. La pagina delle impostazioni può essere vuota, eccetto per il
+> collegamento che riporta alla dashboard.
+> • Implementare un design web responsive.
+> • Utilizzare CSS personalizzato in un file separato.
+> • Utilizzare JavaScript per almeno un elemento interattivo.
+> • Pubblicare il sito web.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Gradito ma non obbligatorio
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+> • Utilizzare personalizzazioni WordPress.
+> • Integrare API per dati dinamici.
+> • Valutare l’utilizzo di jQuery.
