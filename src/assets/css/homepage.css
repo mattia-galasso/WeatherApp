@@ -139,3 +139,19 @@
 .details-text {
   line-height: 1.15rem;
 }
+
+.forecast-row {
+  display: flex;
+  gap: 24px;
+  padding: 24px 32px;
+}
+
+.forecast-row .forecast-card {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .forecast-row {
+    flex-direction: column;
+  }
+}

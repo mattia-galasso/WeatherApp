@@ -1,0 +1,36 @@
+.weekly-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.weekly-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  min-width: 52px;
+}
+
+.weekly-day {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.weekly-icon {
+  font-size: 1.5rem;
+  color: #fbbf24;
+}
+
+.weekly-temp-max {
+  font-weight: 600;
+  color: #182c48;
+}
+
+.weekly-temp-min {
+  font-size: 0.85rem;
+  color: #9aa4b2;
+}
