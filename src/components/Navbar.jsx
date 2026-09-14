@@ -35,7 +35,7 @@ export default function Navbar() {
                   <i class="bi bi-house-door pe-2"></i> Dashboard
                 </NavLink>
               </li>
-              <li className="nav-item ps-3">
+              <li className="nav-item middle-item">
                 <NavLink className="nav-link" href="#" to="/settings">
                   <i class="bi bi-gear pe-2"></i> Impostazioni
                 </NavLink>
