@@ -31,12 +31,12 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav fw-semibold fs-5">
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/">
+                <NavLink className="nav-link" to="/" end>
                   <i className="bi bi-house-door pe-2"></i> Dashboard
                 </NavLink>
               </li>
               <li className="nav-item middle-item">
-                <NavLink className="nav-link" href="#" to="/settings">
+                <NavLink className="nav-link" to="/settings">
                   <i className="bi bi-gear pe-2"></i> Impostazioni
                 </NavLink>
               </li>

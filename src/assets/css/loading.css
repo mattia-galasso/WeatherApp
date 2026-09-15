@@ -1,0 +1,33 @@
+.loading-screen {
+  position: relative;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.loading-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(15, 41, 66, 0.55);
+}
+
+.loading-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #ffffff;
+}
+
+.loading-text {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}

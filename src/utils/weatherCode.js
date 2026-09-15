@@ -7,6 +7,7 @@ export function getWeatherInfo(code) {
   if (code <= 67) return { icon: "🌧️", condition: "Pioggia" };
   if (code <= 77) return { icon: "❄️", condition: "Neve" };
   if (code <= 82) return { icon: "🌧️", condition: "Rovesci" };
+  if (code <= 86) return { icon: "🌨️", condition: "Rovesci di neve" };
   if (code >= 95) return { icon: "⛈️", condition: "Temporale" };
   return { icon: "☁️", condition: "Variabile" };
 }

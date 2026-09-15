@@ -28,7 +28,7 @@ export default function HeroContent({
             <div className="hero-icon-wrap">
               <span className="hero-icon">{icon}</span>
             </div>
-            <div className="weather-text">
+            <div>
               <span className="hero-temp">{temperature}°C</span>
               <p className="hero-condition">{condition}</p>
               <p className="hero-feelslike">Percepita {feelsLike}°</p>

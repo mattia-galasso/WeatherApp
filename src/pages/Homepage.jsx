@@ -3,13 +3,16 @@ import "../assets/css/homepage.css";
 import HeroContent from "../components/HeroContent";
 import HourlyForecast from "../components/HourlyForecast";
 import WeeklyForecast from "../components/WeeklyForecast";
+import LoadingScreen from "../components/LoadingScreen";
+import ErrorMessage from "../components/ErrorMessage";
 
 /* API */
 import { fetchCityWeather } from "../api/weatherAPI";
 import { getWeatherInfo } from "../utils/weatherCode";
 
 export default function Homepage() {
-  /* CONSTANTI USESTATE */
+  
+  /* CONSTANTI useState */
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,8 +32,8 @@ export default function Homepage() {
     loadWeather();
   }, []);
 
-  if (loading) return <p>Caricamento...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return <LoadingScreen />;
+  if (error) return <ErrorMessage message={error} onRetry={loadWeather} />;
 
   /* RECUPERO ICONA E CONDIZIONE METEO */
   const { icon, condition } = getWeatherInfo(weather.current.weather_code);
