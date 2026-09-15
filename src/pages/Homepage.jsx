@@ -33,7 +33,7 @@ export default function Homepage() {
   }, []);
 
   if (loading) return <LoadingScreen />;
-  if (error) return <ErrorMessage message={error} onRetry={loadWeather} />;
+  if (error) return <ErrorMessage message={error} />;
 
   /* RECUPERO ICONA E CONDIZIONE METEO */
   const { icon, condition } = getWeatherInfo(weather.current.weather_code);
