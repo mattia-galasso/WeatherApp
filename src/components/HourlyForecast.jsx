@@ -1,16 +1,9 @@
-import { useState } from "react";
 import "../assets/css/hourlyforecast.css";
-
-const VISIBLE_COUNT = 6;
+import "../assets/css/forecast-shared.css";
+import { usePagination } from "../hooks/usePagination";
 
 export default function HourlyForecast({ hours }) {
-  const [startIndex, setStartIndex] = useState(0);
-  const maxStart = hours.length - VISIBLE_COUNT;
-
-  const visibleHours = hours.slice(startIndex, startIndex + VISIBLE_COUNT);
-
-  const goPrev = () => setStartIndex((i) => Math.max(0, i - 1));
-  const goNext = () => setStartIndex((i) => Math.min(maxStart, i + 1));
+  const { visibleItems, goPrev, goNext, isFirst, isLast } = usePagination(hours);
 
   
   return (
@@ -25,7 +18,7 @@ export default function HourlyForecast({ hours }) {
             type="button"
             className="forecast-nav-btn"
             onClick={goPrev}
-            disabled={startIndex === 0}
+            disabled={isFirst}
             aria-label="Ore precedenti"
           >
             <i className="bi bi-chevron-left"></i>
@@ -34,7 +27,7 @@ export default function HourlyForecast({ hours }) {
             type="button"
             className="forecast-nav-btn"
             onClick={goNext}
-            disabled={startIndex === maxStart}
+            disabled={isLast}
             aria-label="Ore successive"
           >
             <i className="bi bi-chevron-right"></i>
@@ -44,10 +37,10 @@ export default function HourlyForecast({ hours }) {
 
       {/* HOURLY LIST */}
       <div className="hourly-list">
-        {visibleHours.map((hour) => (
+        {visibleItems.map((hour) => (
           <div className="hourly-item" key={hour.time}>
             <span className="hourly-time">{hour.time}</span>
-            <i className={`bi ${hour.icon} hourly-icon`}></i>
+            <span className="hourly-icon">{hour.icon}</span>
             <span className="hourly-temp">{hour.temperature}°</span>
           </div>
         ))}

@@ -1,4 +1,4 @@
-import "../assets/css/herocontent.css"
+import "../assets/css/herocontent.css";
 
 export default function HeroContent({
   city = "Lodi, Italia",
@@ -26,7 +26,7 @@ export default function HeroContent({
           {/* CARD WEATHER */}
           <div className="hero-main">
             <div className="hero-icon-wrap">
-              <i className={`bi ${icon} hero-icon`}></i>
+              <span className="hero-icon">{icon}</span>
             </div>
             <div className="weather-text">
               <span className="hero-temp">{temperature}°C</span>
