@@ -1,4 +1,4 @@
-export default function ErrorMessage({ message, onRetry }) {
+export default function ErrorMessage({ message }) {
   return (
     <div className="container py-5">
       <div className="alert alert-danger d-flex align-items-center gap-3" role="alert">
