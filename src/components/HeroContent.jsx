@@ -1,18 +1,20 @@
+import "../assets/css/herocontent.css"
+
 export default function HeroContent({
   city = "Lodi, Italia",
-  greeting = "Buongiorno, Lodi",
-  date = "Sabato 13 Settembre 2026",
-  temperature = 22,
-  condition = "Sereno",
-  feelsLike = 21,
-  humidity = 68,
-  wind = 12,
-  pressure = 1018,
-  icon = "bi-sun-fill",
+  greeting = "Buongiorno da Lodi",
+  date,
+  temperature,
+  condition,
+  feelsLike,
+  humidity,
+  wind,
+  pressure,
+  icon,
 }) {
   return (
     <>
-      <div className="hero-content">
+      <div>
         <p className="hero-greeting">{greeting}</p>
         <p className="hero-date">{date}</p>
         <p className="hero-location">

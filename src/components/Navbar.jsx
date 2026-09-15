@@ -32,12 +32,12 @@ export default function Navbar() {
             <ul className="navbar-nav fw-semibold fs-5">
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to="/">
-                  <i class="bi bi-house-door pe-2"></i> Dashboard
+                  <i className="bi bi-house-door pe-2"></i> Dashboard
                 </NavLink>
               </li>
               <li className="nav-item middle-item">
                 <NavLink className="nav-link" href="#" to="/settings">
-                  <i class="bi bi-gear pe-2"></i> Impostazioni
+                  <i className="bi bi-gear pe-2"></i> Impostazioni
                 </NavLink>
               </li>
             </ul>

@@ -1,31 +1,38 @@
 .hero {
   position: relative;
-  overflow: hidden;
-  height: calc(100vh - 76px);
+  min-height: calc(100vh - 76px);
+}
+
+.hero-bg,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
 }
 
 .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('/img/background.png');
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
-.hero-overlay{
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(180deg, rgba(37, 99, 235, 0.45), rgba(15, 41, 66, 0.75));
-    transition: background 0.6s ease;
+.hero-overlay {
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.45),
+    rgba(15, 41, 66, 0.75)
+  );
+  transition: background 0.6s ease;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 40px 32px;
-    color: #ffffff;
+  position: relative;
+  z-index: 2;
+  padding: 40px 32px;
+  color: #ffffff;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 .hero-greeting {
@@ -49,18 +56,7 @@
   margin: 0 0 24px;
 }
 
-/* HERO CARD */
-.hero-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: center;
-  background: rgba(15, 41, 66, 0.55);
-  backdrop-filter: blur(6px);
-  border-radius: 16px;
-  padding: 20px 20px;
-  width: fit-content;
-}
+
 
 /* HERO CARD WEATHER */
 .hero-main {
@@ -103,55 +99,48 @@
   opacity: 0.8;
 }
 
-/* HERO CARD DETAILS */
-.hero-details {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  padding-left: 24px;
-  border-left: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.details-item {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-.hero-details p {
-  margin: 0;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-}
-
-.details-item i {
-  font-size: 1.5rem;
-  width: 20px;
-  text-align: center;
-  color: #ffffff;
-  opacity: 0.85;
-}
-
-.details-text {
-  line-height: 1.15rem;
-}
-
 .forecast-row {
   display: flex;
   gap: 24px;
-  padding: 24px 32px;
+  padding: 24px 0;
 }
 
 .forecast-row .forecast-card {
   flex: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .forecast-row {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-main {
+    margin: 0;
+    gap: 10px;
+  }
+
+  .hero-icon-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .hero-icon {
+    font-size: 2.8rem;
+  }
+
+  .hero-temp {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+
+  .hero-condition {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .hero-feelslike {
+    font-size: 0.85rem;
   }
 }
